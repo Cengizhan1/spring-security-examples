@@ -29,13 +29,13 @@ public class SecurityConfig {
     public UserDetailsService users() {
         UserDetails user1 = User.builder()
                 .username("Cengizhan")
-                .password("1234")
+                .password(bCryptPasswordEncoder().encode("1234"))
                 .roles("USER")
                 .build();
 
         UserDetails admin1 = User.builder()
                 .username("admin")
-                .password("1234")
+                .password(bCryptPasswordEncoder().encode("1234"))
                 .roles("ADMIN")
                 .build();
 
