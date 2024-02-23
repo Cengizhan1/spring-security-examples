@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    container_name: spring-security-jwt
+    environment:
+      MYSQL_ROOT_PASSWORD: jwttokenroot
+      MYSQL_DATABASE: jwt-token-db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 123456
+    ports:
+      - '3306:3306'
